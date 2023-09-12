@@ -1,0 +1,11 @@
+def duplicate_encode(word):
+    # input: STR
+    # output: STR
+    lowercase_word = word.lower()
+    output = ''
+    for letter in lowercase_word:
+        if lowercase_word.find(letter) == lowercase_word.rfind(letter):
+            output += '('
+        else:
+            output += ')'
+    return output
